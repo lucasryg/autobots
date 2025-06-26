@@ -1,6 +1,9 @@
 import Image from 'next/image'
+import { useRouter } from 'next/router';
 
 export default function Header() {
+    const { basePath } = useRouter();
+
     return (
         <header className="fixed top-0 left-0 w-full flex px-10 z-50 bg-gray-950 text-1xl text-white">
             <div className="flex items-center justify-between w-full mx-auto max-w-7x1">
@@ -10,7 +13,7 @@ export default function Header() {
                             className='rounded-full'
                             width="50"
                             height="50"
-                            src={"./icon.svg"}
+                            src={`${basePath}/icon.svg`}
                             alt="Imagem do site"
                         />
                     </a>
