@@ -8,7 +8,7 @@ import Formulario from './components/Formulario';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Menu from './components/Menu';
-import eu from './eu.png'
+import eu from '/eu.png'
 import '../../src/app/globals.css';
 
 export const metadata: Metadata = {
