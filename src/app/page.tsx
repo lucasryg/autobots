@@ -9,7 +9,6 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Menu from './components/Menu';
 import '../../src/app/globals.css';
-import { useRouter } from 'next/router';
 
 export const metadata: Metadata = {
   title: 'Autobots - Lucas',
