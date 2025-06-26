@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import icon from './icon.svg'
 
 export default function Header() {
 
@@ -11,7 +12,7 @@ export default function Header() {
                             className='rounded-full'
                             width="50"
                             height="50"
-                            src={`/icon.svg`}
+                            src={icon}
                             alt="Imagem do site"
                         />
                     </a>
