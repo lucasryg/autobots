@@ -13,7 +13,7 @@ export default function Header() {
                             className='rounded-full'
                             width="50"
                             height="50"
-                            src={`${basePath}/icon.svg`}
+                            src={`/icon.svg`}
                             alt="Imagem do site"
                         />
                     </a>
