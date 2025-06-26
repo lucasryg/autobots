@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import icon from '../../public/icon.svg'
-
+import icon from './icon.svg';        
+    
 export default function Header() {
 
     return (
