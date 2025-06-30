@@ -8,6 +8,7 @@ import Formulario from './components/Formulario';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Menu from './components/Menu';
+import eu from '../../public/images/Eu.jpeg';
 import '../../src/app/globals.css';
 
 export const metadata: Metadata = {
@@ -97,11 +98,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="formulario" className="min-h-screen pt-20 px-4 pb-20">
+      <section id="formulario" className="min-h-screen px-4 ">
         <Formulario />
       </section>
 
-      <section id="linkedin" className="min-h-screen pt-20 px-4 pb-20">
+      <section id="linkedin" className="min-h-screen  px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Conecte-se comigo no LinkedIn</h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto text-sm md:text-base">
@@ -109,7 +110,7 @@ export default function Home() {
             Estou à disposição para conversar sobre soluções personalizadas e novas oportunidades.
           </p>
           <div className="flex justify-center p-6">
-            <Image className="rounded-2xl" src="/images/Eu.jpeg" alt="Minha foto" width={300} height={300} />
+            <Image unoptimized={true} className="rounded-2xl" src={eu} alt="Minha foto" width={300} height={300} />
           </div>
           <a
             href="https://www.linkedin.com/in/lucas-r-y-gonçalves-16b608198/"
