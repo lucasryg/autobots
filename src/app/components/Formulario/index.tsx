@@ -9,14 +9,15 @@ export default function Formulario() {
     const [enviado, setEnviado] = useState(false);
     const [erro, setErro] = useState(false);
     const [texto, setTexto] = useState('abaixo');
+    
+    useEffect(() => {
+        const isMobile = window.innerWidth <= 768;
+        setTexto(isMobile ? 'abaixo' : 'ao lado');
+    }, []);
 
     const enviarEmail = (e: React.FormEvent) => {
         e.preventDefault();
-        
-        useEffect(() => {
-            const isMobile = window.innerWidth <= 768;
-            setTexto(isMobile ? 'abaixo' : 'ao lado');
-        }, []);
+
 
         if (!form.current) return;
 
