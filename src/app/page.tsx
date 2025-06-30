@@ -8,7 +8,6 @@ import Formulario from './components/Formulario';
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Menu from './components/Menu';
-import eu from './Eu.jpeg'
 import '../../src/app/globals.css';
 
 export const metadata: Metadata = {
@@ -110,7 +109,7 @@ export default function Home() {
             Estou à disposição para conversar sobre soluções personalizadas e novas oportunidades.
           </p>
           <div className="flex justify-center p-6">
-            <Image unoptimized={true} className="rounded-2xl" src={eu} alt="Minha foto" width={300} height={300} />
+            <Image className="rounded-2xl" src="/images/Eu.jpeg" alt="Minha foto" width={300} height={300} />
           </div>
           <a
             href="https://www.linkedin.com/in/lucas-r-y-gonçalves-16b608198/"

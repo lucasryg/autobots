@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import emailjs from '@emailjs/browser';
 
 export default function Formulario() {
@@ -8,18 +8,37 @@ export default function Formulario() {
     const form = useRef<HTMLFormElement>(null);
     const [enviado, setEnviado] = useState(false);
     const [erro, setErro] = useState(false);
+    const [texto, setTexto] = useState('abaixo');
 
     const enviarEmail = (e: React.FormEvent) => {
         e.preventDefault();
+        
+        useEffect(() => {
+            const isMobile = window.innerWidth <= 768;
+            setTexto(isMobile ? 'abaixo' : 'ao lado');
+        }, []);
 
         if (!form.current) return;
 
+        emailjs.init({
+            publicKey: 'HEj_GsdW86WUxlHo1SZMI',
+            blockHeadless: true,
+            blockList: {
+                watchVariable: 'userEmail',
+            },
+            limitRate: {
+                id: 'app',
+                throttle: 10000,
+            },
+        });
+
+        console.log(form.current)
         emailjs
             .sendForm(
                 'service_np8grza',
                 'template_kbk49be',
                 form.current,
-                '0lOg8ozcxecL2tt_2'
+                { publicKey: '0lOg8ozcxecL2tt_2' }
             )
             .then(
                 () => {
@@ -42,10 +61,10 @@ export default function Formulario() {
                 <div>
                     <h2 className="text-4xl font-bold mb-4">Vamos conversar?</h2>
                     <p className="text-gray-400 mb-6">
-                        Tem interesse em automatizar seus atendimentos com inteligência artificial? Ou precisa de um projeto personalizado com chatbot?
+                        Tem interesse em automatizar seus atendimentos com inteligência artificial? Precisa de um projeto personalizado com chatbot?
                     </p>
                     <p className="text-gray-400">
-                        Preencha o formulário ao lado e nossa equipe entrará em contato com você em até 24 horas úteis.
+                        Preencha o formulário {texto} e nossa equipe entrará em contato com você em até 24 horas úteis.
                     </p>
                 </div>
 
