@@ -1,6 +1,8 @@
 'use client';
 import { useState } from 'react';
 import { HiOutlineMenu, HiOutlineX } from 'react-icons/hi';
+import Image from 'next/image';
+import icon from '../../../../public/images/Icon.svg';
 
 const links = [
     { href: '#home', label: 'Início' },
@@ -16,7 +18,10 @@ export default function Menu() {
     return (
         <nav className="fixed top-0 left-0 w-full bg-[#0d0d0d] z-50 text-white shadow-md">
             <div className="flex justify-between items-center px-6 py-4 max-w-6xl mx-auto">
-                <span className="text-xl font-bold">Autobots</span>
+                <div className='flex items-center'>
+                    <Image src={icon} alt="Logo site" />
+                    <span className="text-xl font-bold">Autobots</span>
+                </div>
 
                 {/* Menu Desktop */}
                 <ul className="hidden md:flex gap-6">
@@ -51,6 +56,8 @@ export default function Menu() {
                     ))}
                 </ul>
             )}
+            <div
+            className='h-1 bg-blue-600'></div>
         </nav>
     );
 }

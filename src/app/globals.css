@@ -24,11 +24,3 @@ html {
   overflow-x: hidden;
 }
 
-.scroll-container {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  /* transição mais lenta personalizada */
-  scroll-padding: 0;
-  overscroll-behavior-y: contain;
-  transition: scroll 1s ease-in-out; /* <-- essa linha NÃO funciona diretamente */
-}

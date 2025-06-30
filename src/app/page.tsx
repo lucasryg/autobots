@@ -45,7 +45,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="introducao" className="min-h-screen pt-20 px-4 pb-20">
+      <section id="introducao" className="min-h-screen px-4 flex flex-col justify-center"> 
         <h1 className="text-3xl text-center font-bold pt-10 mb-8">Por que contratar um chatbot para seu negócio?</h1>
         <div className="flex flex-col md:flex-row justify-around items-center gap-6 mb-10">
           <div className="flex flex-col items-center text-center max-w-xs">
@@ -67,7 +67,7 @@ export default function Home() {
         <CarrosselCard />
       </section>
 
-      <section id="produto" className="min-h-screen pt-20 px-4 pb-20">
+      <section id="produto" className="flex flex-col min-h-screen px-4 items-center justify-center ">
         <div className="flex flex-col lg:flex-row justify-around items-center gap-10 mb-10">
           <h1 className="text-4xl md:text-5xl font-bold text-center lg:text-left">
             <p className="text-blue-600">Futuro</p> do autoatendimento!
@@ -98,11 +98,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="formulario" className="min-h-screen px-4 ">
+      <section id="formulario" className="min-h-screen flex items-center  justify-center px-4">
         <Formulario />
       </section>
 
-      <section id="linkedin" className="min-h-screen  px-4">
+      <section id="linkedin" className="min-h-screen pt-40 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Conecte-se comigo no LinkedIn</h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto text-sm md:text-base">

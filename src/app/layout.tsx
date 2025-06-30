@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Header from "./components/Header";
 import 'swiper/css';
 
 export const metadata: Metadata = {
@@ -14,9 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
-     <body className="overflow-x-hidden">
-        <Header/>
+    <html lang="pt-BR" >
+      <body className="overflow-x-hidden">
         {children}
       </body>
     </html>
