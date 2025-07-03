@@ -11,7 +11,6 @@ import Menu from './components/Menu';
 import eu from '../../public/images/Eu.jpeg';
 import '../../src/app/globals.css';
 import WhatsAppButton from './components/Whatsapp';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Autobots - Lucas',
