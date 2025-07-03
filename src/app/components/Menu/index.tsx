@@ -7,6 +7,7 @@ import icon from '../../../../public/images/Icon.svg';
 const links = [
     { href: '#home', label: 'Início' },
     { href: '#introducao', label: 'Introdução' },
+    { href: '#implantacao ', label: 'Implantação' },
     { href: '#produto', label: 'Produto' },
     { href: '#formulario', label: 'Formulário' },
     { href: '#linkedin', label: 'LinkedIn' },

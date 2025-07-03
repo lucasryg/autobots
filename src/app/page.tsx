@@ -10,6 +10,8 @@ import Image from 'next/image';
 import Menu from './components/Menu';
 import eu from '../../public/images/Eu.jpeg';
 import '../../src/app/globals.css';
+import WhatsAppButton from './components/Whatsapp';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Autobots - Lucas',
@@ -33,19 +35,14 @@ export default function Home() {
           <p className="mb-5 text-sm md:text-base">
             Melhore o atendimento ao cliente e otimize seu suporte com nosso chatbot inteligente.
           </p>
-          <a
-            href="#introducao"
-            className="hover:underline bg-blue-600 h-10 w-40 rounded-sm flex items-center justify-center text-sm"
-          >
-            Saiba mais
-          </a>
+          <WhatsAppButton />
         </div>
         <div className="w-full md:max-w-md">
           <Chat />
         </div>
       </section>
 
-      <section id="introducao" className="min-h-screen px-4 flex flex-col justify-center"> 
+      <section id="introducao" className="min-h-screen px-4 flex flex-col justify-center pt-22">
         <h1 className="text-3xl text-center font-bold pt-10 mb-8">Por que contratar um chatbot para seu negócio?</h1>
         <div className="flex flex-col md:flex-row justify-around items-center gap-6 mb-10">
           <div className="flex flex-col items-center text-center max-w-xs">
@@ -64,7 +61,72 @@ export default function Home() {
             <p className="text-sm">Diminua custos operacionais automatizando o atendimento.</p>
           </div>
         </div>
+        <h2 className="text-3xl font-bold text-center pt-10">
+          Benefícios do Autobots
+        </h2>
         <CarrosselCard />
+      </section>
+
+      <section id='implantacao' className="min-h-screen px-4 flex flex-col justify-center p-20">
+        <div className=" bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16 px-4 sm:px-6 lg:px-8 rounded-xl shadow-2xl">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-4xl font-extrabold mb-2 text-center">
+              Implantação é Conosco
+            </h1>
+            <h2 className="text-2xl font-semibold mb-12 text-center text-blue-100">
+              Como funciona?
+            </h2>
+
+            <div className="g-gradient-to-r from-blue-600 to-blue-800 bg-opacity-10 backdrop-blur-sm p-8 rounded-lg">
+              <h3 className="text-2xl font-bold mb-8 text-center">Nosso processo</h3>
+
+              <div className="space-y-8">
+                {/* Passo 1 */}
+                <div className="flex items-start">
+                  <div className="bg-white text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                    1
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Registro</h4>
+                    <p className="text-blue-100">
+                      Orientaremos você no cadastro do seu número de WhatsApp, garantindo
+                      que tudo esteja configurado corretamente para começar.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Passo 3 (original 2) */}
+                <div className="flex items-start">
+                  <div className="bg-white text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                    2
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Templates</h4>
+                    <p className="text-blue-100">
+                      Desenvolvemos juntos modelos de mensagem personalizados que
+                      se alinham perfeitamente com suas necessidades de negócios e tom de voz.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Passo 4 (original 3) */}
+                <div className="flex items-start">
+                  <div className="bg-white text-blue-600 rounded-full w-8 h-8 flex items-center justify-center font-bold mr-4 mt-1 flex-shrink-0">
+                    3
+                  </div>
+                  <div>
+                    <h4 className="text-xl font-semibold mb-2">Começo</h4>
+                    <p className="text-blue-100">
+                      Com tudo configurado, você estará pronto para operar com máxima eficiência,
+                      aproveitando todo o potencial da nossa plataforma.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="produto" className="flex flex-col min-h-screen px-4 items-center justify-center ">
